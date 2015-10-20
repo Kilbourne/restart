@@ -1,0 +1,65 @@
+.novita{
+
+	padding: 0px; 
+  	text-align: center;
+	word-wrap: break-word;
+	margin-top: 180px;
+
+	&>div {
+		@extend .wrapper;
+		margin: auto auto;
+		@extend %clearfix;
+		
+		&>h2{
+		  border-bottom: solid 1px #bbb;
+		  
+		  letter-spacing: 0.15em;
+		  font-weight: normal;
+		  margin-bottom:60px;
+	  	}
+	}
+
+	ul{		  
+		margin: 0px auto;
+	}
+	
+	li{
+		width: 16%;
+		margin: 0 20px 30px;
+		display: inline-block;
+		vertical-align: bottom;
+		  
+		h4{ 
+			font-family: "Merryweather";
+			font-size: 11px;
+			opacity:0;
+			text-align: center;
+			line-height: 16px;
+
+			  a{
+			  	  	color: #19BDFA;
+			  	    text-decoration: none;
+			  }
+		}
+
+	}
+	
+	img{
+		width: 171.2px;
+		height:256px;
+		position: relative;	
+	}
+
+	.shadow{
+		border-style: solid;
+		border-width: 0px 0px 35px;
+		&.sh1{
+			border-image: url("http://livedemo00.template-help.com/magento_37205/skin/frontend/default/theme076k/images/new_shadow.png") 0 126 15 0 fill;		
+		}
+		&.sh2{
+			border-image: url("http://livedemo00.template-help.com/magento_37205/skin/frontend/default/theme076k/images/new_shadow.png") 0 0 15 126 fill;		
+		}
+	}
+	
+}
+

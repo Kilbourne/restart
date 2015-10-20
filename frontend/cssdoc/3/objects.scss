@@ -1,0 +1,151 @@
+// OBJECTS
+// =======
+
+// BLOCK
+// -------
+
+// ###The block object simply stacks an image on top of some text-like content.
+
+$inuit-block-gutter:            $inuit-base-spacing-unit !default;
+$inuit-enable-block--flush:     false !default;
+$inuit-enable-block--tiny:      false !default;
+$inuit-enable-block--small:     false !default;
+$inuit-enable-block--large:     false !default;
+$inuit-enable-block--huge:      false !default;
+$inuit-enable-block--center:    false !default;
+$inuit-enable-block--right:     false !default;
+// BOX
+// -----
+
+// ###The box object simply boxes off content.
+
+$inuit-box-padding:         $inuit-base-spacing-unit !default;
+$inuit-enable-box--flush:   false !default;
+$inuit-enable-box--tiny:    false !default;
+$inuit-enable-box--small:   false !default;
+$inuit-enable-box--large:   false !default;
+$inuit-enable-box--huge:    false !default;
+// BUTTONS
+// -------
+// A simple button object.
+
+$inuit-btn-padding:         halve($inuit-base-spacing-unit) !default;
+$inuit-btn-padding--small:  halve($inuit-btn-padding) !default;
+$inuit-btn-padding--large:  double($inuit-btn-padding) !default;
+$inuit-btn-background:      #4a8ec2 !default;
+$inuit-btn-color:           #fff !default;
+$inuit-btn-border-width:    1px !default;
+$inuit-btn-border-style:    solid !default;
+$inuit-btn-border-color:    $inuit-btn-background !default;
+$inuit-btn-radius:          0 !default;
+
+$inuit-enable-btn--small:   false !default;
+$inuit-enable-btn--large:   false !default;
+$inuit-enable-btn--full:    false !default;
+$inuit-enable-btn--pill:    false !default;
+// FLAG
+// -----
+// The flag object is a design pattern similar to the media object, however it
+// utilises `display: table[-cell];` to give us control over the vertical
+// alignments of the text and image. csswizardry.com/2013/05/the-flag-object
+$inuit-flag-namespace:          $inuit-namespace !default;
+
+$inuit-flag-gutter:             $inuit-base-spacing-unit !default;
+$inuit-flag-gutter--tiny:         quarter($inuit-flag-gutter) !default;
+$inuit-flag-gutter--small:          halve($inuit-flag-gutter) !default;
+$inuit-flag-gutter--large:         double($inuit-flag-gutter) !default;
+$inuit-flag-gutter--huge:       quadruple($inuit-flag-gutter) !default;
+
+$inuit-enable-flag--tiny:       false !default;
+$inuit-enable-flag--small:      false !default;
+$inuit-enable-flag--large:      false !default;
+$inuit-enable-flag--huge:       false !default;
+$inuit-enable-flag--rev:        false !default;
+$inuit-enable-flag--flush:      false !default;
+$inuit-enable-flag--top:        false !default;
+$inuit-enable-flag--bottom:     false !default;
+$inuit-enable-flag--responsive: false !default;
+$inuit-flag-collapse-at:        720px !default;
+// LAYOUT
+// --------
+// The inuitcss layout system uses `box-sizing: border-box;` and
+// `display: inline-block;` to create an extremely powerful, flexible
+// alternative to the traditional grid system. Combine the layout items with
+// the widths found in `trumps.widths`.
+$inuit-layout-namespace:        $inuit-namespace !default;
+
+$inuit-layout-gutter:           $inuit-base-spacing-unit !default;
+$inuit-layout-gutter--tiny:       quarter($inuit-layout-gutter) !default;
+$inuit-layout-gutter--small:        halve($inuit-layout-gutter) !default;
+$inuit-layout-gutter--large:       double($inuit-layout-gutter) !default;
+$inuit-layout-gutter--huge:     quadruple($inuit-layout-gutter) !default;
+
+$inuit-enable-layout--tiny:     false !default;
+$inuit-enable-layout--small:    false !default;
+$inuit-enable-layout--large:    false !default;
+$inuit-enable-layout--huge:     false !default;
+$inuit-enable-layout--flush:    false !default;
+$inuit-enable-layout--rev:      false !default;
+$inuit-enable-layout--middle:   false !default;
+$inuit-enable-layout--bottom:   false !default;
+$inuit-enable-layout--right:    false !default;
+$inuit-enable-layout--center:   false !default;
+$inuit-enable-layout--auto:     false !default;
+// LIST-UI
+// ---------
+// The UI list object creates blocky list items with a keyline separator out of
+// a `ul` or `ol`.
+$inuit-list-ui-padding:         $inuit-base-spacing-unit !default;
+
+$inuit-list-ui-border-width:    1px !default;
+$inuit-list-ui-border-style:    solid !default;
+$inuit-list-ui-border-color:    #ccc !default;
+
+$inuit-enable-list-ui--tiny:    false !default;
+$inuit-enable-list-ui--small:   false !default;
+$inuit-enable-list-ui--large:   false !default;
+$inuit-enable-list-ui--huge:    false !default;
+// MEDIA
+// ---------
+//  Place any image- and text-like content side-by-side, as per:
+ // stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ $inuit-media-gutter:                $inuit-base-spacing-unit !default;
+
+ $inuit-enable-media--tiny:          false !default;
+$inuit-enable-media--small:         false !default;
+$inuit-enable-media--large:         false !default;
+$inuit-enable-media--huge:          false !default;
+$inuit-enable-media--rev:           false !default;
+$inuit-enable-media--flush:         false !default;
+$inuit-enable-media--responsive:    false !default;
+$inuit-media-collapse-at:           720px !default;
+
+// PACK
+// -------
+// The pack object simply causes any number of elements pack up horizontally to
+// (()) automatically fill an equal, fluid width of their parent.
+$inuit-pack-gutter:         $inuit-base-spacing-unit !default;
+$inuit-enable-pack--auto:   false !default;
+$inuit-enable-pack--tiny:   false !default;
+$inuit-enable-pack--small:  false !default;
+$inuit-enable-pack--large:  false !default;
+$inuit-enable-pack--huge:   false !default;
+$inuit-enable-pack--rev:    false !default;
+$inuit-enable-pack--middle: false !default;
+$inuit-enable-pack--bottom: false !default;
+
+// WRAPPERS
+// -------
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-right: $spacing-unit--small;
+    padding-left:  $spacing-unit--small;
+
+    @include media-query(lap-and-up) {
+        padding-right: $spacing-unit;
+        padding-left:  $spacing-unit;
+    }
+
+}

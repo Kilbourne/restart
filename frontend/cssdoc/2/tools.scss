@@ -1,0 +1,190 @@
+// TOOLS
+// =====
+
+// FUNCTIONS
+// --------
+// inuitcss makes use of a few functions that are also available for you to use
+// later on in your extension of the framework.
+
+  // Maths helpers.
+@function quarter($inuit-number) {
+    @return round($inuit-number / 4);
+}
+
+@function halve($inuit-number) {
+    @return round($inuit-number / 2);
+}
+
+@function double($inuit-number) {
+    @return round($inuit-number * 2);
+}
+
+@function quadruple($inuit-number) {
+    @return round($inuit-number * 4);
+}
+
+// MIXIN
+// ------
+
+  // Create a fully formed type style (sizing and vertical rhythm) by passing in a
+  // single value, e.g.:
+  //
+  // .foo {
+  //     @include inuit-font-size(12px);
+  // }
+  //
+  // This will generate a rem-based font-size with its pixel fallback, as well as
+  // a unitless line-height which will place the element on your baseline, e.g.:
+  //
+  // .foo {
+  //     font-size: 12px;
+  //     font-size: 0.75rem;
+  //     line-height: 2;
+  // }
+  //
+  // If you do not want inuitcss to generate you a line-height automatically, you
+  // simply pass in your own as a second paramater:
+  //
+  // .foo {
+  //     @include inuit-font-size(12px, 1.5);
+  // }
+  //
+  // This will yield:
+  //
+  // .foo {
+  //     font-size: 12px;
+  //     font-size: 0.75rem;
+  //     line-height: 1.5;
+  // }
+  //
+  // This parameter can be any integer, ‘inherit’, or ‘normal’. If you don’t want
+  // a line-height at all, pass in a second paramater of ‘none’ or ‘false’:
+  //
+  // .foo {
+  //     @include inuit-font-size(12px, none);
+  // }
+  //
+  // This will yield:
+  //
+  // .foo {
+  //     font-size: 12px;
+  //     font-size: 0.75rem;
+  // }
+
+// CLEARFIX
+// --------
+
+// Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+// Extend the clearfix class with Sass to avoid the `.clearfix` class appearing
+// over and over in your markup.
+
+// SHOW-HIDE
+// --------
+
+@mixin hide() {
+    position: absolute !important;
+    height: 1px; width: 1px; 
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.hide { @include hide(); }
+
+@include media-query(palm) {
+    .hide-palm { @include hide(); }
+}
+
+@include media-query(lap) {
+    .hide-lap { @include hide(); }
+}
+
+@include media-query(lap-and-up) {
+    .hide-lap-and-up { @include hide(); }
+}
+
+@include media-query(portable) {
+    .hide-portable { @include hide(); }
+}
+
+@include media-query(desk) {
+    .hide-desk { @include hide(); }
+}
+
+// SPACING
+// ------
+
+
+// Margin and padding helper classes. Use these to tweak layout on a micro
+// level.
+// `.(m|p)(t|r|b|l|h|v)(-|+|0) {}` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
+
+$inuit-enable-margins:                  false !default;
+$inuit-enable-margins--tiny:            false !default;
+$inuit-enable-margins--small:           false !default;
+$inuit-enable-margins--large:           false !default;
+$inuit-enable-margins--huge:            false !default;
+
+$inuit-enable-margins--negative:        false !default;
+$inuit-enable-margins--negative-tiny:   false !default;
+$inuit-enable-margins--negative-small:  false !default;
+$inuit-enable-margins--negative-large:  false !default;
+$inuit-enable-margins--negative-huge:   false !default;
+
+$inuit-enable-margins--none:            false !default;
+
+$inuit-enable-paddings:                 false !default;
+$inuit-enable-paddings--tiny:           false !default;
+$inuit-enable-paddings--small:          false !default;
+$inuit-enable-paddings--large:          false !default;
+$inuit-enable-paddings--huge:           false !default;
+
+$inuit-enable-paddings--none:           false !default;
+
+$inuit-enable-responsive-margins:                   false !default;
+$inuit-enable-responsive-margins--tiny:             false !default;
+$inuit-enable-responsive-margins--small:            false !default;
+$inuit-enable-responsive-margins--large:            false !default;
+$inuit-enable-responsive-margins--huge:             false !default;
+
+$inuit-enable-responsive-margins--negative:         false !default;
+$inuit-enable-responsive-margins--negative-tiny:    false !default;
+$inuit-enable-responsive-margins--negative-small:   false !default;
+$inuit-enable-responsive-margins--negative-large:   false !default;
+$inuit-enable-responsive-margins--negative-huge:    false !default;
+
+$inuit-enable-responsive-margins--none:             false !default;
+
+$inuit-enable-responsive-paddings:                  false !default;
+$inuit-enable-responsive-paddings--tiny:            false !default;
+$inuit-enable-responsive-paddings--small:           false !default;
+$inuit-enable-responsive-paddings--large:           false !default;
+$inuit-enable-responsive-paddings--huge:            false !default;
+
+$inuit-enable-responsive-paddings--none:            false !default;
+
+// WIDTHS
+// --------
+
+//  A series of width helper classes that you can use to size things like grid
+//  systems. Classes can take a fraction-like format (e.g. `.u-2/3`) or a spoken-
+//  word format (e.g. `.u-2-of-3`). Use these in your markup:
+//
+
+$inuit-widths-columns: (
+    1,
+    2,
+    3,
+    4,
+    5,
+) !default;
+
+@include inuit-widths($inuit-widths-columns);
+
+$inuit-widths-columns-responsive: (
+    1,
+    2,
+    3,
+    4,
+    5,
+) !default;

@@ -1,0 +1,17 @@
+html,body.login,body.login div#login h1 a  {
+	background:#58B1FC repeat 0 0 fixed  !important ;
+	height: auto !important;
+}
+
+body.login div#login h1 a{
+	white-space: nowrap;
+	font-size: 36px !important;
+	display: inline !important;
+}
+body.login div#login p#nav a,body.login div#login p#backtoblog a,body.login div#login h1 a {
+	color: white !important;
+}
+.oneall_social_login_providers{
+overflow:hidden !important;
+height: 48px !important;
+}

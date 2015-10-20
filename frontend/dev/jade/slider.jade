@@ -1,0 +1,86 @@
+section.usati
+	div.title-section
+		a.carousel-control(href="#")
+			i.fa.fa-angle-left
+		h2  Le occasioni del momento
+		a.carousel-control(href="#")
+			i.fa.fa-angle-right
+	div.carousel-wrapper
+		div.carousel.hoverdir.little
+			- var n=0 ;
+			- for (var x=1;x<4;x++){				
+			div.carousel-row
+				- for (var y=1;y<5;y++){
+				block product
+					div.product
+						- n= y+((x-1)*4);
+						- n= n<10?"0"+n:n;
+						img(src="asset/images/g/a#{n}.jpg", alt="")
+						div.product-details
+							div.product-details-content
+								h3.titolo
+									a(href="#") Egon Schiele. 
+										| L'opera completa
+								p.autore
+									a(href="#") Jane Kallir
+								span.price 
+									span.amount 150€
+								span.cats Pittura,arte
+								div.product-button
+									a(class="button-addToCart",href="#")
+										span
+									a(class="button-Info", href="#") 
+										span
+								a.button-quickview
+									span
+				-}
+			- }
+			
+
+	div(class="evidenza clearfix")
+		div.single
+			div.product
+				figure
+					a(href="")
+						img(src="asset/images/g/b1.jpg", alt="")
+					a.quickview
+				div.info-principali
+					p.autore By
+						a  Jane Kallir
+					h3.titolo
+						a Egon Schiele. 
+							| L'opera completa
+					div.text-fill
+						span In definitiva l' opera completa di 
+						| Egon Schiele rappresenta la stoica 
+						| consapevolezza di una sensibilità che esercita attraverso l' arte il sano nichilismo di non produrre immagini salvifiche per il mondo, l' edonismo creativo di chi non si lascia colpevolizzare dall' economia di una morale da adulti, per questo conciliante. La morte ha stroncato la giovane vita di Schiele lasciandoci una riserva di immagini capaci di esibire le spoglie narcisistiche di un erotismo che, seppure mutilato, rappresenta l' unico deterrente per delirare alla fine di un' epoca ridotta alla pornografia del frammento.
+				div(class="product-details clearfix")
+					span.price
+						span.amount 900€
+					span.cats
+					a(class="button-addToCart",href="#") 
+						span
+					div.wishlist Aggiungi alla Wishlist
+		div.hoverdir.little
+			ul
+				- for (var y=1;y<5;y++){
+				li.product
+					img(src="asset/images/g/c#{y}.jpg", alt="")
+					div.product-details
+						div.product-details-content
+							h3.titolo
+								a(href="#") Egon Schiele.
+									| L'opera completa
+							p.autore
+								a(href="#") Jane Kallir
+							span.price 
+								span.amount 150€
+							span.cats Pittura,arte
+							div.product-button
+								a(class="button-addToCart",href="#")
+									span
+								a(class="button-Info", href="#") 
+									span
+							a.button-quickview
+								span
+				- }		

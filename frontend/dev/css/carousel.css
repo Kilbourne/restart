@@ -1,0 +1,134 @@
+.usati {
+	text-align: center;
+	color: #5c5c5c;
+  	font-family: "Merriweather",Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+  	font-weight: 400;
+}
+.usati p{
+	margin: 0 0 1.5em;
+}
+.usati .button {
+	
+  -moz-box-shadow: 0 5px 10px -2px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 5px 10px -2px rgba(0,0,0,0.5);
+  box-shadow: 0 5px 10px -2px rgba(0,0,0,0.5);
+  display: inline-block;
+  padding: 5px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 3px;
+  background: #000;
+  color: #fff;
+  font-family: "Raleway",arial,sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 20px !important;
+
+}
+.carousel > div {
+
+}
+.carousel-row {
+	overflow: hidden;
+  	float: left;
+}
+.product {
+	position: relative;
+  	overflow: hidden;
+  	display: block;	
+}
+.carousel .product{	
+	width: 25%;
+	float: left;
+}
+.product img {
+	
+  	max-width: 100%;
+  	display: block;
+  	height: 295px;
+  	width:351px;
+}
+.product .product-details {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+  display:none;
+}
+.carousel .product .product-details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: none repeat scroll 0% 0% #F8F8F8;
+    padding: 30px;
+
+}
+.product-details-content {
+  display: block;
+  vertical-align: middle;
+  width: 100%;
+  top: 50%;
+  position: relative;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.titolo {
+  font-family: "Merriweather",Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0;
+}
+.autore {
+	  color: #aaa;
+  font-size: 11px;
+   margin-bottom: 5px;
+}
+.price {
+}
+.amount {
+  font-size: 24px;
+  color: #3c3c3c;
+  display: block;
+  text-decoration: none;
+}
+.cats {
+}
+
+.addToCart {
+}
+.quickview {
+}
+.evidenza > div {
+	  float: left;
+	   width: 50%; 	 
+}
+.evidenza figure img{
+
+  	height: 358px;
+  	width:100%;
+  	margin-bottom: 20px !important;
+}
+.product .info-principali{
+	  width: 66.66667%;
+	  float: left;
+}
+.evidenza .titolo{
+  margin-bottom: 20px;
+}
+.evidenza .product-details{
+	  width: 33.33333%;
+	  float: left;
+}
+.evidenza ul{
+	margin:0;
+}
+.evidenza li{
+	  width: 50%;
+	  float:left;
+}

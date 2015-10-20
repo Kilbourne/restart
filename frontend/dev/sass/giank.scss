@@ -1,0 +1,75 @@
+// Settings ---- Sass vars, etc.
+// Tools ------- Functions and mixins.
+// Generic ----- Generic, high-level styling, like resets, etc.
+// Base -------- Unclasses HTML elements (e.g. `h2`, `ul`).
+// Objects ----- Objects and abstractions.
+// Components -- Your designed UI elements (inuitcss includes none of these).
+// Trumps ------ Overrides and helper classes.
+
+// SETTINGS:
+@import "bower_components/inuit-defaults/settings.defaults";
+@import "settings.global";
+@import "settings.colors"; 
+@import "bower_components/inuit-responsive-settings/settings.responsive";
+
+// TOOLS:
+@import "bower_components/inuit-functions/tools.functions";
+@import "bower_components/inuit-mixins/tools.mixins";
+@import "tools.mixins";
+@import "bower_components/inuit-responsive-tools/tools.responsive";
+@import "bower_components/inuit-tools-widths/tools.widths";
+@import "tools.aliases";
+
+// GENERIC:
+@import "bower_components/inuit-normalize/generic.normalize";
+@import "bower_components/inuit-box-sizing/generic.box-sizing";
+@import "bower_components/inuit-reset/generic.reset";
+
+
+// BASE:
+@import "fontface";
+@import "bower_components/inuit-page/base.page";
+@import "base.page";
+@import "bower_components/inuit-headings/base.headings";
+@import "base.type";
+@import "base.links";
+@import "bower_components/inuit-paragraphs/base.paragraphs";
+@import "bower_components/inuit-lists/base.lists";
+@import "bower_components/inuit-images/base.images";
+
+
+// OBJECTS:
+@import "objects.wrappers";
+//@import "bower_components/inuit-block/objects.block";
+$inuit-enable-btn--small: true;
+$inuit-enable-btn--large: true;
+@import "bower_components/inuit-buttons/objects.buttons";
+//@import "bower_components/inuit-layout/objects.layout";
+//@import "bower_components/inuit-box/objects.box";
+@import "bower_components/inuit-list-inline/objects.list-inline";
+//@import "bower_components/inuit-media/objects.media";
+//@import "bower_components/inuit-flag/objects.flag";
+//@import "bower_components/inuit-pack/objects.pack";
+
+
+
+// COMPONTENTS:
+// > Your components here <
+@import "dev/sass/overlay";
+@import "dev/sass/header";
+@import "dev/sass/grid";
+@import "dev/sass/carousel";
+@import "dev/sass/search";
+@import "dev/sass/social";
+@import "dev/sass/footer";
+
+// TRUMPS:
+@import "bower_components/inuit-clearfix/trumps.clearfix";
+// @import "bower_components/inuit-widths/trumps.widths";
+// @import "bower_components/inuit-widths-responsive/trumps.widths-responsive";
+// @import "bower_components/inuit-spacing/trumps.spacing";
+// @import "bower_components/inuit-spacing-responsive/trumps.spacing-responsive";
+// @import "trumps.show-hide";
+
+//
+

@@ -1,0 +1,71 @@
+
+.footer {
+	@extend .wrapper;
+	padding: 0px; 
+	padding:10px 3px;
+	word-wrap: break-word;
+	background-color: rgb(255, 255, 255);
+min-width: 100%;
+	transition: all 0.3s ease 0s;
+
+max-height: 175px;
+	& > div {
+		width: 1100px;
+		margin: 0 auto;
+		text-align: center;
+		vertical-align: top;
+		@extend %clearfix;
+	}
+	.footer-wrapper{
+		margin-left:40px;
+		width: 710px;
+		display: inline-block;
+		vertical-align: top;
+	}
+.brand{
+	@extend %clearfix;
+	display: inline-block;
+}
+.brand h1{
+border-top: 10px solid #FCC32B;
+font-size: 40px;
+line-height: 40px;
+}
+.brand h2{
+	font-size: 15px;
+}
+.settings {
+	font-size: 10px;	
+	float:none;
+}
+section{
+			margin: 0px 27px;
+		display: inline-block;
+		vertical-align: top;
+}
+ul{
+	list-style: outside none none;
+}
+li{
+	margin: 5px auto;
+	font-size: 10px;
+	line-height: 1.5;
+	height: 16px;
+	text-transform: uppercase;
+}
+.menuf{
+  	margin: 0px 0 24px 24px;
+}
+.menuf nav{
+
+}
+
+.menuf li{
+
+	&:hover{
+	 border-bottom: 1px solid $brand-color;
+	}
+}
+
+
+}

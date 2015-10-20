@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+       <table id="stream_table">
+           <thead></thead>
+           <tbody></tbody>
+       </table>
+    <script id="template" type="text/html">
+  <tr>
+    <td>{{record.Il}}</td>
+    <td>{{record.Cognme}}</td>
+    <td>{{record.Nome}}</td>
+    <td>{{record.Argomento}}</td>
+    <td>{{record.N}}</td>
+    <td>{{record.Prezzi}}</td>
+  </tr>
+</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="stream_table.js"></script>
+        <script src="mustache.js"></script>
+<script>
+     
+var template = Mustache.compile($.trim($("#template").html()));
+
+var view = function(record, index){
+  return template({record: record, index: index});
+};
+var options = {
+  view: view,                  //View function to render table rows.
+  data_url: 'catalog-obj.json',  //Data fetching url
+  stream_after: 2,             //Start streaming after 2 secs
+  fetch_data_limit: 500,       //Streaming data in batch of 500 
+} ;
+var data=[
+
+];
+var st = StreamTable('#stream_table', options, data);
+</script>
+    
+    </body>
+</html>

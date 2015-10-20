@@ -1,0 +1,17 @@
+a#search-form.anchor
+section.search-form
+	div
+		h2  Cerca nel nostro catalogo
+		h6  "Non conosco lettura più piacevole di quella di un catalogo di libri vecchi"   
+			span  - Anatole France, padrino dei bibliofili. 
+		div.search-form-container
+			input(type='text',placeholder='Cerca un titolo',name='titolo')
+			select.category(name='category')
+				option(selected) Tutte le categorie
+			select.autore1(name='autore')
+				option(selected) Tutti gli autori
+		div.result
+			div.placeholder-wrapper
+				span Qui andrà la tabella con i risultati della ricerca catalogo
+				img.placeholder(src="asset/images/catalog_placeholder.jpg", alt="")
+

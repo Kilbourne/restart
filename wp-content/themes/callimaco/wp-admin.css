@@ -1,0 +1,110 @@
+body.login,body.login div#login h1 a  {
+	background:#58B1FC repeat 0 0 fixed  !important ;
+}
+body.login div#login{
+	font-size: 36px;
+}
+body.login div#login p#nav a,body.login div#login p#backtoblog a{
+	color: white !important;
+}
+.oneall_social_login_providers{
+overflow:hidden !important;
+height: 48px !important;
+}
+.screen-meta-toggle{
+	display: none !important;
+}
+#ozhmenu_wrap{
+	  position: fixed !important;
+	    overflow: visible !important;
+}
+#ozhmenu{
+
+  height: 45px !important;
+}
+#ozhmenu a,div.wp-menu-image::before{
+    color:white !important;
+}
+#ozhmenu li ul{
+
+	  display: none !important;
+	  background: #428BCA !important;
+}
+#ozhmenu li ul.visible-important{
+	display: block !important;
+}
+#ozhmenu .ozhmenu_sublevel a:hover, #ozhmenu .ozhmenu_sublevel a.current, #ozhmenu .ozhmenu_sublevel a.current:hover {
+    background-color: #58B1FC !important;
+    }
+    .ozhmenu_toplevel{
+    	padding-top: 7px !important; 
+    }
+    #oam_bloglink {
+    	  font-size: 1.3rem;
+    	  padding-top: 0px !important;
+    }
+    #wpbody{
+    	  top: 40px;
+    }
+#postbox-container-1{
+	width:100%;
+}
+
+.selectize-input input {
+  width: 100% !important;
+}
+.vp-field.vp-textcbox{
+	display:none ;
+}
+.vp-fixed-loop  > .vp-wpa-group{
+	border: 0px !important; 
+}
+.vp-fixed-loop  > .vp-wpa-group > .vp-wpa-group-heading{
+	border-bottom: 0px !important; 
+}
+.vp-metabox .vp-wpa-loop{
+	padding: inherit !important;
+}
+  .vp-input.vp-js-select2{
+  	  height: 34px;
+  padding: 6px 12px;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	}
+#clmc_book_meta\5b group1\5d \5b 0\5d \5b _regular_price\5d > .field > .input > input, #clmc_book_meta\5b group1\5d \5b 0\5d \5b pa_n_pag\5d > .field > .input > input, #clmc_book_meta\5b group1\5d \5b 0\5d \5b fixed_a_publ\5d \5b 0\5d \5b ss_a_publ\5d > div.field > div.input > div > div {
+	max-width: 200px !important;
+}
+#clmc_book_meta\5b group1\5d \5b 0\5d \5b _regular_price\5d > .field > .input::after{
+	content:"€" ;
+	font-size: 1em;
+  	font-weight: bold;
+  	line-height: 1.4em;
+  	margin: 6px 0 4px;
+}
+.custom-user-profile{
+	float:right !important;
+	margin-right: 24px !important;
+}
+.custom-user-profile a{
+	display: inline !important;
+}
+.user_info{
+	margin-left: 10px;
+}
+.avatar{
+  margin: 0px 8px -15px 0px;
+border-radius: 100%;
+border: 2px solid rgba(255, 255, 255, 0.5);
+}
+.manage-column {
+	white-space: nowrap;
+	  text-overflow: ellipsis;
+}

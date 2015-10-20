@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="dist/css/giank.css">	
+<link rel="stylesheet" href="bower_components/custombox/dist/custombox.min.css">	
+
+
+	</head>
+  <body>
+  <div id="fb-root"></div>
+<script>
+    function isArray(a) {
+				return Object.prototype.toString.call(a) === "[object Array]";
+			}
+			
+			function make(desc) {
+				if (!isArray(desc)) {
+					return make.call(this, Array.prototype.slice.call(arguments));
+				}
+				
+				var name = desc[0],
+				attributes = desc[1],
+				
+				el = document.createElement(name),
+				attr,
+				i,
+				start = 1;
+				if (typeof attributes === "object" && attributes !== null && !isArray(attributes)) {
+					for ( attr in attributes) {
+						el[attr] = attributes[attr];
+					}
+					start = 2;
+				}
+				
+				for ( i = start; i < desc.length; i++) {
+					if (isArray(desc[i])) {
+						el.appendChild(make(desc[i]));
+					}
+					else {
+						el.appendChild(document.createTextNode(desc[i]));
+					}
+				}
+				
+				return el;
+			}          
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : 1555133888082231,
+          xfbml      : false,
+          version    : 'v2.1'
+        });
+      
+        FB.api('/51581894441/posts', 'get', { 
+  access_token : '1555133888082231|sfaZY_stixvZ1GYklQg5xLAb2ZQ'
+},function(response) {
+  if (!response || response.error) {
+    alert('Error occured');
+  } else {
+   	FBdata=response.data;
+     postByLikes=FBdata.filter(function(e){return e.likes}).sort(function(a,b) {  return parseFloat(b.likes.data.length) - parseFloat(a.likes.data.length) } );
+
+
+ 
+
+  $('.social .single').append('<div class="fb-post" data-href="https://www.facebook.com/51581894441/posts/'+postByLikes.shift().id.split('_')[1]+'"data-width="300"></div>');
+  	var  	 popID=postByLikes.slice(0,5).map(function(e){return e.id});
+FBdata=FBdata.filter(function(e){return popID.indexOf(e.id)===-1});
+  	$('.single  .fb_iframe_widget span').height(Math.ceil($('.single .fb_iframe_widget iframe').height()*0.8));
+
+  $('.single  .fb_iframe_widget span').width(Math.ceil($('.single  .fb_iframe_widget iframe').width()*0.8));
+
+    $('.social .popular li').append(function(i){return makePost(postByLikes[i ])});
+    $('.social .recent li').append(function(i){return makePost(FBdata[i])})
+$('.text-fill').dotdotdot();
+  FB.XFBML.parse(document.getElementsByClassName('social')[1],function(){
+
+})
+
+  }
+});
+
+      };      
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.async=true;
+         js.src = "//connect.facebook.net/it_IT/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+         function makePost(post){
+    var FBelement=make(["div",
+    	['div',['img',{src:post.picture?post.picture:''}]],
+    	['div',
+    		['a',(aa=new Date(post.created_time),aa.toLocaleString())],
+    		['div',['p',post.message?post.message:''],['p',post.name?post.name:(post.caption?post.caption:'')],['p',post.description?post.description:'']],
+    		['div',['span',['a','See Translation']],['span',['a','Condividi']],['span',['a','Likes']]
+    	]
+    	]]);
+    $(FBelement).addClass('FB_el');
+    $(FBelement).find('img').addClass('block_img');
+    $(FBelement).children('div')[0].className='img_container';
+    $(FBelement).children('div')[1].className='block_body';
+    $(FBelement).children('div').children('a').addClass('post__date');
+    $(FBelement).children('div').children('div')[0].className='post__link text-fill';
+    $(FBelement).children('div').children('div')[1].className='post__share';
+
+    return FBelement
+};
+
+    </script>
+    <div class="sidemenu_overlay"></div>
+  <div class="side_menu push_menu">
+  
+      <div class="widget woocommerce widget_shopping_cart"><div class="widget_shopping_cart_content">
+
+<ul class="cart_list product_list_widget ">
+
+  
+    <li class="empty">No products in the cart.</li>
+
+  
+</ul><!-- end product list -->
+
+
+</div></div>    <div class="widget WooCommerceMyAccountWidget"><div class="logout"><h2 class="widgettitle">Customer Login</h2>
+    <form name="wma_login_form" id="wma_login_form" action="http://tokokoodemo.us/papirus/books/wp-login.php" method="post">
+      
+      <p class="login-username">
+        <label for="user_login">Username</label>
+        <input name="log" id="user_login" class="input" value="" size="20" type="text">
+      </p>
+      <p class="login-password">
+        <label for="user_pass">Password</label>
+        <input name="pwd" id="user_pass" class="input" value="" size="20" type="password">
+      </p>
+      
+      
+      <p class="login-submit">
+        <input name="wp-submit" id="wp-submit" class="button-primary" value="Log In" type="submit">
+        <input name="redirect_to" value="http://tokokoodemo.us/papirus/books/" type="hidden">
+      </p>
+      
+    </form><a class="woo-ma-link woo-ma-lost-pass" href="http://tokokoodemo.us/papirus/books/my-account/lost-password/">Lost password?</a><p><a class="woo-ma-button woo-ma-cart-link cart-link" href="http://tokokoodemo.us/papirus/books/cart/" title="View your shopping cart">View your shopping cart</a></p></div></div>     
+  </div>
+
+  <div class="site_content">
+     <div id="quick-view-modal" hidden="hidden"><div class="modal-wrapper"><div class="product"><div class="modal-image"><img src="asset/images/g/a04.jpg" alt=""/><form id="" method="" action=""><button class="button-addToCart"><span></span></button></form></div><div class="summary"><h1 class="titolo">Egon Schiele. L'opera completa</h1><div><p class="prezzo"><span class="amount">150 €</span></p></div><div class="description"><p> In definitiva l' opera completa di Egon Schiele rappresenta la stoica consapevolezza di una sensibilità che esercita attraverso l' arte il sano nichilismo di non produrre immagini salvifiche per il mondo, l' edonismo creativo di chi non si lascia colpevolizzare dall' economia di una morale da adulti, per questo conciliante. La morte ha stroncato la giovane vita di Schiele lasciandoci una riserva di immagini capaci di esibire le spoglie narcisistiche di un erotismo che, seppure mutilato, rappresenta l' unico deterrente per delirare alla fine di un' epoca ridotta alla pornografia del frammento.</p></div></div></div></div></div>
+    <header class="page_header"><div class="header-wrap"><div class="brand"><h1 class="bigbrand"> <a href="#">DANTE & DESCARTES</a></h1><h2 class="litlebrand"><a href="#">LIBRERIA</a></h2></div><section class="settings"><nav class="settings-nav"><ul><li><a href="#">ITA</a></li><li><a href="#">€</a></li><li><img src="asset/images/pay_pal_logo.png" alt="" class="paypal"/></li></ul><ul><li><a href="#">SIGN IN</a></li><li><a href="#">ACCOUNT</a></li></ul><ul><li><a href="#">LOG IN</a></li><li class="last"><a class="fb-connect">LOG IN FACEBOOK</a></li></ul></nav></section><section class="menu primary_menu">			<nav><ul><li><a href="#search-form">Catalogo</a></li><li><a href="#">Edizioni</a></li><li><a href="#blog">Blog</a></li><li><a href="#contact">Dove Siamo</a></li></ul></nav></section><section class="action"><ul><li class="cart"><a href="#"> <i class="fa fa-shopping-cart"></i></a></li><li class="search-form-menu"><div class="search_bar"><form id="search-bar" method="" action=""><input name="s" id="top_S" placeholder="Cerca nel nostro catalogo" Type="text" class="field txt"/></form></div><a href="#" class="search_button_trigger"> <i class="fa fa-search"></i></a></li></ul><div class="arrow"></div></section></div></header>
+      <section class="novita"><div><h2>IL LIBRAIO CONSIGLIA		</h2><ul><li><a href="" title=""><img src="./asset/images/g01.jpg" width="107" height="160" alt=""/></a><div class="shadow sh1"></div><h4><a> </a>E. Ionesco<br/> La Cantatrice calva</h4></li><li><a href="" title=""><img src="./asset/images/g02.jpg" width="107" height="160" alt=""/></a><div class="shadow sh1"></div><h4><a> </a>E. Ionesco<br/> La Cantatrice calva</h4></li><li><a href="" title=""><img src="./asset/images/g03.jpg" width="107" height="160" alt=""/></a><div class="shadow sh1"></div><h4><a> </a>E. Ionesco<br/> La Cantatrice calva</h4></li><li><a href="" title=""><img src="./asset/images/g04.jpg" width="107" height="160" alt=""/></a><div class="shadow sh1"></div><h4><a> </a>E. Ionesco<br/> La Cantatrice calva</h4></li><li><a href="" title=""><img src="./asset/images/g05.jpg" width="107" height="160" alt=""/></a><div class="shadow sh1"></div><h4><a> </a>E. Ionesco<br/> La Cantatrice calva</h4></li></ul><ul><li><a href="" title=""><img src="./asset/images/g06.jpg" width="107" height="160" alt=""/></a><div class="shadow sh1"></div><h4><a> </a>E. Ionesco<br/> La Cantatrice calva</h4></li><li><a href="" title=""><img src="./asset/images/g07.jpg" width="107" height="160" alt=""/></a><div class="shadow sh1"></div><h4><a> </a>E. Ionesco<br/> La Cantatrice calva</h4></li><li><a href="" title=""><img src="./asset/images/g08.jpg" width="107" height="160" alt=""/></a><div class="shadow sh1"></div><h4><a> </a>E. Ionesco<br/> La Cantatrice calva</h4></li><li><a href="" title=""><img src="./asset/images/g09.jpg" width="107" height="160" alt=""/></a><div class="shadow sh1"></div><h4><a> </a>E. Ionesco<br/> La Cantatrice calva</h4></li><li><a href="" title=""><img src="./asset/images/g10.jpg" width="107" height="160" alt=""/></a><div class="shadow sh1"></div><h4><a> </a>E. Ionesco<br/> La Cantatrice calva</h4></li></ul><ul><li><a href="" title=""><img src="./asset/images/g11.jpg" width="107" height="160" alt=""/></a><div class="shadow sh1"></div><h4><a> </a>E. Ionesco<br/> La Cantatrice calva</h4></li><li><a href="" title=""><img src="./asset/images/g12.jpg" width="107" height="160" alt=""/></a><div class="shadow sh1"></div><h4><a> </a>E. Ionesco<br/> La Cantatrice calva</h4></li><li><a href="" title=""><img src="./asset/images/g13.jpg" width="107" height="160" alt=""/></a><div class="shadow sh1"></div><h4><a> </a>E. Ionesco<br/> La Cantatrice calva</h4></li><li><a href="" title=""><img src="./asset/images/g14.jpg" width="107" height="160" alt=""/></a><div class="shadow sh1"></div><h4><a> </a>E. Ionesco<br/> La Cantatrice calva</h4></li><li><a href="" title=""><img src="./asset/images/g15.jpg" width="107" height="160" alt=""/></a><div class="shadow sh1"></div><h4><a> </a>E. Ionesco<br/> La Cantatrice calva</h4></li></ul></div></section>
+        <section class="usati"><div class="title-section"><a href="#" class="carousel-control"><i class="fa fa-angle-left"></i></a><h2> Le occasioni del momento</h2><a href="#" class="carousel-control"><i class="fa fa-angle-right"></i></a></div><div class="carousel-wrapper"><div class="carousel hoverdir little"><div class="carousel-row"><div class="product"><img src="asset/images/g/a01.jpg" alt=""/><div class="product-details"><div class="product-details-content"><h3 class="titolo"><a href="#">Egon Schiele. 
+L'opera completa</a></h3><p class="autore"><a href="#">Jane Kallir</a></p><span class="price"> <span class="amount">150€</span></span><span class="cats">Pittura,arte</span><div class="product-button"><a href="#" class="button-addToCart"><span></span></a><a href="#" class="button-Info"> <span></span></a></div><a class="button-quickview"><span></span></a></div></div></div><div class="product"><img src="asset/images/g/a02.jpg" alt=""/><div class="product-details"><div class="product-details-content"><h3 class="titolo"><a href="#">Egon Schiele. 
+L'opera completa</a></h3><p class="autore"><a href="#">Jane Kallir</a></p><span class="price"> <span class="amount">150€</span></span><span class="cats">Pittura,arte</span><div class="product-button"><a href="#" class="button-addToCart"><span></span></a><a href="#" class="button-Info"> <span></span></a></div><a class="button-quickview"><span></span></a></div></div></div><div class="product"><img src="asset/images/g/a03.jpg" alt=""/><div class="product-details"><div class="product-details-content"><h3 class="titolo"><a href="#">Egon Schiele. 
+L'opera completa</a></h3><p class="autore"><a href="#">Jane Kallir</a></p><span class="price"> <span class="amount">150€</span></span><span class="cats">Pittura,arte</span><div class="product-button"><a href="#" class="button-addToCart"><span></span></a><a href="#" class="button-Info"> <span></span></a></div><a class="button-quickview"><span></span></a></div></div></div><div class="product"><img src="asset/images/g/a04.jpg" alt=""/><div class="product-details"><div class="product-details-content"><h3 class="titolo"><a href="#">Egon Schiele. 
+L'opera completa</a></h3><p class="autore"><a href="#">Jane Kallir</a></p><span class="price"> <span class="amount">150€</span></span><span class="cats">Pittura,arte</span><div class="product-button"><a href="#" class="button-addToCart"><span></span></a><a href="#" class="button-Info"> <span></span></a></div><a class="button-quickview"><span></span></a></div></div></div></div><div class="carousel-row"><div class="product"><img src="asset/images/g/a05.jpg" alt=""/><div class="product-details"><div class="product-details-content"><h3 class="titolo"><a href="#">Egon Schiele. 
+L'opera completa</a></h3><p class="autore"><a href="#">Jane Kallir</a></p><span class="price"> <span class="amount">150€</span></span><span class="cats">Pittura,arte</span><div class="product-button"><a href="#" class="button-addToCart"><span></span></a><a href="#" class="button-Info"> <span></span></a></div><a class="button-quickview"><span></span></a></div></div></div><div class="product"><img src="asset/images/g/a06.jpg" alt=""/><div class="product-details"><div class="product-details-content"><h3 class="titolo"><a href="#">Egon Schiele. 
+L'opera completa</a></h3><p class="autore"><a href="#">Jane Kallir</a></p><span class="price"> <span class="amount">150€</span></span><span class="cats">Pittura,arte</span><div class="product-button"><a href="#" class="button-addToCart"><span></span></a><a href="#" class="button-Info"> <span></span></a></div><a class="button-quickview"><span></span></a></div></div></div><div class="product"><img src="asset/images/g/a07.jpg" alt=""/><div class="product-details"><div class="product-details-content"><h3 class="titolo"><a href="#">Egon Schiele. 
+L'opera completa</a></h3><p class="autore"><a href="#">Jane Kallir</a></p><span class="price"> <span class="amount">150€</span></span><span class="cats">Pittura,arte</span><div class="product-button"><a href="#" class="button-addToCart"><span></span></a><a href="#" class="button-Info"> <span></span></a></div><a class="button-quickview"><span></span></a></div></div></div><div class="product"><img src="asset/images/g/a08.jpg" alt=""/><div class="product-details"><div class="product-details-content"><h3 class="titolo"><a href="#">Egon Schiele. 
+L'opera completa</a></h3><p class="autore"><a href="#">Jane Kallir</a></p><span class="price"> <span class="amount">150€</span></span><span class="cats">Pittura,arte</span><div class="product-button"><a href="#" class="button-addToCart"><span></span></a><a href="#" class="button-Info"> <span></span></a></div><a class="button-quickview"><span></span></a></div></div></div></div><div class="carousel-row"><div class="product"><img src="asset/images/g/a09.jpg" alt=""/><div class="product-details"><div class="product-details-content"><h3 class="titolo"><a href="#">Egon Schiele. 
+L'opera completa</a></h3><p class="autore"><a href="#">Jane Kallir</a></p><span class="price"> <span class="amount">150€</span></span><span class="cats">Pittura,arte</span><div class="product-button"><a href="#" class="button-addToCart"><span></span></a><a href="#" class="button-Info"> <span></span></a></div><a class="button-quickview"><span></span></a></div></div></div><div class="product"><img src="asset/images/g/a10.jpg" alt=""/><div class="product-details"><div class="product-details-content"><h3 class="titolo"><a href="#">Egon Schiele. 
+L'opera completa</a></h3><p class="autore"><a href="#">Jane Kallir</a></p><span class="price"> <span class="amount">150€</span></span><span class="cats">Pittura,arte</span><div class="product-button"><a href="#" class="button-addToCart"><span></span></a><a href="#" class="button-Info"> <span></span></a></div><a class="button-quickview"><span></span></a></div></div></div><div class="product"><img src="asset/images/g/a11.jpg" alt=""/><div class="product-details"><div class="product-details-content"><h3 class="titolo"><a href="#">Egon Schiele. 
+L'opera completa</a></h3><p class="autore"><a href="#">Jane Kallir</a></p><span class="price"> <span class="amount">150€</span></span><span class="cats">Pittura,arte</span><div class="product-button"><a href="#" class="button-addToCart"><span></span></a><a href="#" class="button-Info"> <span></span></a></div><a class="button-quickview"><span></span></a></div></div></div><div class="product"><img src="asset/images/g/a12.jpg" alt=""/><div class="product-details"><div class="product-details-content"><h3 class="titolo"><a href="#">Egon Schiele. 
+L'opera completa</a></h3><p class="autore"><a href="#">Jane Kallir</a></p><span class="price"> <span class="amount">150€</span></span><span class="cats">Pittura,arte</span><div class="product-button"><a href="#" class="button-addToCart"><span></span></a><a href="#" class="button-Info"> <span></span></a></div><a class="button-quickview"><span></span></a></div></div></div></div></div></div><div class="evidenza clearfix"><div class="single"><div class="product"><figure><a href=""><img src="asset/images/g/b1.jpg" alt=""/></a><a class="quickview"></a></figure><div class="info-principali"><p class="autore">By<a> Jane Kallir</a></p><h3 class="titolo"><a>Egon Schiele. 
+L'opera completa</a></h3><div class="text-fill"><span>In definitiva l' opera completa di </span>Egon Schiele rappresenta la stoica 
+consapevolezza di una sensibilità che esercita attraverso l' arte il sano nichilismo di non produrre immagini salvifiche per il mondo, l' edonismo creativo di chi non si lascia colpevolizzare dall' economia di una morale da adulti, per questo conciliante. La morte ha stroncato la giovane vita di Schiele lasciandoci una riserva di immagini capaci di esibire le spoglie narcisistiche di un erotismo che, seppure mutilato, rappresenta l' unico deterrente per delirare alla fine di un' epoca ridotta alla pornografia del frammento.</div></div><div class="product-details clearfix"><span class="price"><span class="amount">900€</span></span><span class="cats"></span><a href="#" class="button-addToCart"> <span></span></a><div class="wishlist">Aggiungi alla Wishlist</div></div></div></div><div class="hoverdir little"><ul><li class="product"><img src="asset/images/g/c1.jpg" alt=""/><div class="product-details"><div class="product-details-content"><h3 class="titolo"><a href="#">Egon Schiele.
+L'opera completa</a></h3><p class="autore"><a href="#">Jane Kallir</a></p><span class="price"> <span class="amount">150€</span></span><span class="cats">Pittura,arte</span><div class="product-button"><a href="#" class="button-addToCart"><span></span></a><a href="#" class="button-Info"> <span></span></a></div><a class="button-quickview"><span></span></a></div></div></li><li class="product"><img src="asset/images/g/c2.jpg" alt=""/><div class="product-details"><div class="product-details-content"><h3 class="titolo"><a href="#">Egon Schiele.
+L'opera completa</a></h3><p class="autore"><a href="#">Jane Kallir</a></p><span class="price"> <span class="amount">150€</span></span><span class="cats">Pittura,arte</span><div class="product-button"><a href="#" class="button-addToCart"><span></span></a><a href="#" class="button-Info"> <span></span></a></div><a class="button-quickview"><span></span></a></div></div></li><li class="product"><img src="asset/images/g/c3.jpg" alt=""/><div class="product-details"><div class="product-details-content"><h3 class="titolo"><a href="#">Egon Schiele.
+L'opera completa</a></h3><p class="autore"><a href="#">Jane Kallir</a></p><span class="price"> <span class="amount">150€</span></span><span class="cats">Pittura,arte</span><div class="product-button"><a href="#" class="button-addToCart"><span></span></a><a href="#" class="button-Info"> <span></span></a></div><a class="button-quickview"><span></span></a></div></div></li><li class="product"><img src="asset/images/g/c4.jpg" alt=""/><div class="product-details"><div class="product-details-content"><h3 class="titolo"><a href="#">Egon Schiele.
+L'opera completa</a></h3><p class="autore"><a href="#">Jane Kallir</a></p><span class="price"> <span class="amount">150€</span></span><span class="cats">Pittura,arte</span><div class="product-button"><a href="#" class="button-addToCart"><span></span></a><a href="#" class="button-Info"> <span></span></a></div><a class="button-quickview"><span></span></a></div></div></li></ul></div></div></section>
+        <a id="search-form" class="anchor"></a><section class="search-form"><div><h2> Cerca nel nostro catalogo</h2><h6> "Non conosco lettura più piacevole di quella di un catalogo di libri vecchi"   <span> - Anatole France, padrino dei bibliofili. </span></h6><div class="search-form-container"><input type="text" placeholder="Cerca un titolo" name="titolo"/><select name="category" class="category"><option selected="selected">Tutte le categorie</option></select><select name="autore" class="autore1"><option selected="selected">Tutti gli autori</option></select></div><div class="result"><div class="placeholder-wrapper"><span>Qui andrà la tabella con i risultati della ricerca catalogo</span><img src="asset/images/catalog_placeholder.jpg" alt="" class="placeholder"/></div></div></div></section>
+        <a id="blog" class="anchor"></a><div class="social"><div class="content"><h2>Blog</h2><div><div class="single"></div></div><div class="popular"><ul><li></li><li></li><li></li><li></li><li></li></ul></div><div class="recent"><ul><li></li><li></li><li></li><li></li><li></li></ul></div></div></div>
+        <a id="contact" class="anchor"></a>
+        <div  class='contact-wrapper'>
+        
+            
+                <h2 class="contant-form-title">OUR CONTACTS
+
+                </h2>
+            
+        <div class='contact'>
+
+        <div class="contact-form">
+
+            <form  id="contact-form">                
+                <fieldset>
+                    <div class="name-wrapper">
+                        <label class="name">
+                            <input id="regula-generated-10757" name="name" value="" data-constraints="@Required @JustLetters" type="text">                        
+                        <span  class="_placeholder">Your name:</span></label>
+                    </div>
+                    
+                    <div class="phone-wrapper">
+                        <label class="phone">
+                            <input id="regula-generated-949847" name="phone" value="" data-constraints="@Required @JustNumbers" type="text">
+                            
+                        <span  class="_placeholder">Phone number:</span></label>
+                    </div>
+                    <div>
+                        <label class="email">
+                            <input id="regula-generated-381721" name="email" value="" data-constraints="@Required @Email" type="text">
+                        <span  class="_placeholder">Email address:</span></label>
+                    </div>
+                    
+                    <div >
+                        <label class="message">
+                            <textarea class="" id="regula-generated-931221" name="message" data-constraints="@Required @Length(min=20,max=999999)"></textarea>
+                        <span  class="_placeholder">Message:</span></label>
+                    </div>
+                    
+                    
+                        <div class="contact-form-buttons">
+                            <a href="#" data-type="reset" class="btn-default">clear</a>
+                            <a href="#" data-type="submit" class="btn-default">submit</a>
+                        </div>
+                    
+                </fieldset>
+                </form>
+        </div>
+    <div class="store-info">
+            <div class="like-box">
+						<div class="fb-like-box" data-href="https://www.facebook.com/51581894441" data-width="300px" data-height="200px" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
+	
+		</div>
+    <div>
+        <aside class="opening-hours"><h5 class="hour-title">Orario d'apertura</h5><ul class="no-list-style"><li><span class="day">Lun-Sab: </span>09:00 - 19:00</li><li><span class="day">Sunday: </span>09:00 - 14:00</li>
+        	
+        </ul></aside>
+        	<div class="tel"><h5>Recapiti</h5>
+		<ul>
+        	<li><span class="day">Sede Mezzocannone: </span>081 5515368</li>
+        	<li><span class="day">Sede Piazza del Gesù: </span>081 4202413</li>			
+        	<li><span class="day">Email: </span></li>		
+        	</ul>
+        	</div>
+        	</div>
+
+        </div>
+        </div>
+        	<div id="googleMap"></div>
+        </div>
+          
+         <footer class="footer"><div><div class="brand"><h1><a href="#">DANTE & DESCARTES</a></h1><h2><a href="#">LIBRERIA</a></h2></div><div class="footer-wrapper"><section class="settings"><nav class="settings-navf"><ul><li><a href="#">MY ACCOUNT</a></li><li><a href="#">SHIPPING</a></li><li><a href="#">SITEMAP</a></li><li><a href="#">LEGAL NOTICE</a></li><li><a href="#">TERMS & CONDITIONS</a></li></ul></nav></section><section class="menuf">			<nav><ul><li><a href="#">Catalogo</a></li><li><a href="#">Edizioni</a></li><li><a href="#">Blog</a></li><li><a href="#">Dove Siamo</a></li></ul></nav></section><section class="action"><ul><li class="cart"><a href="#"> <i class="fa fa-shopping-cart"></i></a></li><li class="search-form-menu"><a href="#"> <i class="fa fa-search"></i></a><div class="search-bar"> <form id="search-bar" method="" action=""><input/></form></div></li></ul><ul><li class="fb"><a href=""> </a></li><li class="ebay"></li></ul></section></div></div></footer>
+</div>
+
+    <script src="dist/js/all.js"></script>
+
+    
+    </body>
+</html>

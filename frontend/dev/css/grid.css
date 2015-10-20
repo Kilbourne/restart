@@ -1,0 +1,235 @@
+
+
+#novita .novita-wrapper{
+      font: 12px/1.35 Arial, Helvetica, sans-serif;
+  color: #999;
+    text-align: left;
+    padding: 0 0 19px 0;
+  margin: -9px 0 0 0;
+  width: 940px;
+  margin: 24px auto;
+}
+#novita .novita-row {
+      padding: 0;
+      list-style: none;
+    position: relative;
+        margin: 0 -11px 0 -6px;
+    width: 957px;
+}
+#novita .novita-row li{
+      float: left;
+  width: 119px;
+  margin: 32px 72px 0 0;
+  background: url(http://livedemo00.template-help.com/magento_37205/skin/frontend/default/theme076k/images/new_shadow.png) no-repeat 0% 152px;
+  min-height: 230px;
+}
+#novita .novita-row li.last{
+  margin: 0 !important;
+}
+#novita .novita-row div{
+      clear: both;
+  height: 1px;
+  font-size: 0%;
+  line-height: 0%;
+}
+#novita .novita-row li a{
+      color: #19BDFA;
+  text-decoration: underline;
+    display: block;
+  width: 107px;
+  height: 160px;
+  margin: 0 auto;
+
+} 
+#novita .novita-row li img{
+  border: 0;
+  vertical-align: top;
+    margin-top: 0px;
+}
+
+#novita .novita-row li h3{
+      font-weight: normal;
+        font-size: 11px;
+  display: none;
+  text-align: center;
+  line-height: 16px;
+  padding: 22px 0 0 0;
+}
+#novita .novita-row li h3 a{
+    color: #19BDFA;
+  text-decoration: none;
+}
+.novita-titolo{
+      text-align: center;
+  position: relative;
+  padding-bottom: 14px;
+  border-bottom: solid 1px #bbb;
+  margin: 0 0 63px 0;
+    font-family: bulmer;
+  font-size: 70px;
+  color: black;
+  letter-spacing: 16px;
+  padding-top: 45px;
+}
+
+#DIV_1 {
+    color: rgb(153, 153, 153);
+    height: 693px;
+    text-align: left;
+    width: 940px;
+    perspective-origin: 470px 356px;
+    transform-origin: 470px 356px;
+    border: 0px none rgb(153, 153, 153);
+    font: normal normal normal normal 12px/16.2000007629395px Arial, Helvetica, sans-serif;
+
+    outline: rgb(153, 153, 153) none 0px;
+padding: 77px 0px 19px;
+margin: 0px auto;
+    
+    
+}/*#DIV_1*/
+
+#UL_2, #UL_39, #UL_76 {
+    color: rgb(153, 153, 153);
+    height: 231px;
+    position: relative;
+    text-align: left;
+    width: 957px;
+    perspective-origin: 478.5px 115.5px;
+    transform-origin: 478.5px 115.5px;
+    border: 0px none rgb(153, 153, 153);
+    font: normal normal normal normal 12px/16.2000007629395px Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    margin: 0px -11px 0px -6px;
+    outline: rgb(153, 153, 153) none 0px;
+    padding: 0px;
+}/*#UL_2, #UL_39, #UL_76*/
+
+#LI_3, #LI_8, #LI_13, #LI_18, #LI_23, #LI_28, #LI_40, #LI_45, #LI_50, #LI_55, #LI_60, #LI_65, #LI_77, #LI_82, #LI_87, #LI_92, #LI_97, #LI_102 {
+    background-position: 0% 152px;
+    color: rgb(153, 153, 153);
+    float: left;
+    height: 230px;
+    min-height: 230px;
+    width: 119px;
+    perspective-origin: 59.5px 115px;
+    transform-origin: 59.5px 115px;
+    background: rgba(0, 0, 0, 0) url(http://livedemo00.template-help.com/magento_37205/skin/frontend/default/theme076k/images/new_shadow.png) no-repeat scroll 0% 152px / auto padding-box border-box;
+    border: 0px none rgb(153, 153, 153);
+    font: normal normal normal normal 12px/16.2000007629395px Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    margin: 0px 20px 0px 0px;
+    outline: rgb(153, 153, 153) none 0px;
+}/*#LI_3, #LI_8, #LI_13, #LI_18, #LI_23, #LI_28, #LI_40, #LI_45, #LI_50, #LI_55, #LI_60, #LI_65, #LI_77, #LI_82, #LI_87, #LI_92, #LI_97, #LI_102*/
+
+#A_4, #A_9, #A_14, #A_19, #A_24, #A_29, #A_34, #A_41, #A_46, #A_51, #A_56, #A_61, #A_66, #A_71, #A_78, #A_83, #A_88, #A_93, #A_98, #A_103, #A_108 {
+    color: rgb(25, 189, 250);
+    display: block;
+    height: 160px;
+    text-align: left;
+    width: 107px;
+    perspective-origin: 53.5px 80px;
+    transform-origin: 53.5px 80px;
+    border: 0px none rgb(25, 189, 250);
+    font: normal normal normal normal 12px/16.2000007629395px Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    margin: 0px 6px;
+    outline: rgb(25, 189, 250) none 0px;
+}/*#A_4, #A_9, #A_14, #A_19, #A_24, #A_29, #A_34, #A_41, #A_46, #A_51, #A_56, #A_61, #A_66, #A_71, #A_78, #A_83, #A_88, #A_93, #A_98, #A_103, #A_108*/
+
+#IMG_5, #IMG_10, #IMG_15, #IMG_20, #IMG_25, #IMG_30, #IMG_35, #IMG_42, #IMG_47, #IMG_52, #IMG_57, #IMG_62, #IMG_67, #IMG_72, #IMG_79, #IMG_84, #IMG_89, #IMG_94, #IMG_99, #IMG_104, #IMG_109 {
+    color: rgb(25, 189, 250);
+    height: 160px;
+    text-align: left;
+    vertical-align: top;
+    width: 107px;
+    perspective-origin: 53.5px 80px;
+    transform-origin: 53.5px 80px;
+    border: 0px none rgb(25, 189, 250);
+    font: normal normal normal normal 12px/16.2000007629395px Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    outline: rgb(25, 189, 250) none 0px;
+}/*#IMG_5, #IMG_10, #IMG_15, #IMG_20, #IMG_25, #IMG_30, #IMG_35, #IMG_42, #IMG_47, #IMG_52, #IMG_57, #IMG_62, #IMG_67, #IMG_72, #IMG_79, #IMG_84, #IMG_89, #IMG_94, #IMG_99, #IMG_104, #IMG_109*/
+
+#H3_6, #H3_11, #H3_16, #H3_21, #H3_26, #H3_31, #H3_36, #H3_43, #H3_48, #H3_53, #H3_58, #H3_63, #H3_68, #H3_73, #H3_80, #H3_85, #H3_90, #H3_95, #H3_100, #H3_105, #H3_110 {
+    color: rgb(153, 153, 153);
+    display: none;
+    height: auto;
+    text-align: center;
+    width: auto;
+    perspective-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    border: 0px none rgb(153, 153, 153);
+    font: normal normal normal normal 11px/16px Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    margin: 0px;
+    outline: rgb(153, 153, 153) none 0px;
+    padding: 22px 0px 0px;
+}/*#H3_6, #H3_11, #H3_16, #H3_21, #H3_26, #H3_31, #H3_36, #H3_43, #H3_48, #H3_53, #H3_58, #H3_63, #H3_68, #H3_73, #H3_80, #H3_85, #H3_90, #H3_95, #H3_100, #H3_105, #H3_110*/
+
+#A_7, #A_12, #A_22, #A_32, #A_37, #A_44, #A_54, #A_64, #A_74, #A_81, #A_91, #A_101, #A_111 {
+    color: rgb(25, 189, 250);
+    text-align: center;
+    text-decoration: none;
+    perspective-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    border: 0px none rgb(25, 189, 250);
+    font: normal normal normal normal 11px/16px Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    outline: rgb(25, 189, 250) none 0px;
+}/*#A_7, #A_12, #A_22, #A_32, #A_37, #A_44, #A_54, #A_64, #A_74, #A_81, #A_91, #A_101, #A_111*/
+
+#A_17, #A_27, #A_49, #A_69, #A_86, #A_106 {
+    color: rgb(25, 189, 250);
+    text-align: center;
+    text-decoration: none;
+    perspective-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    border: 0px none rgb(25, 189, 250);
+    font: normal normal normal normal 11px/16px Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    outline: rgb(25, 189, 250) none 0px;
+}/*#A_17, #A_27, #A_49, #A_69, #A_86, #A_106*/
+
+#LI_33, #LI_70, #LI_107 {
+    background-position: 0% 152px;
+    color: rgb(153, 153, 153);
+    float: left;
+    height: 230px;
+    min-height: 230px;
+    width: 119px;
+    perspective-origin: 59.5px 115px;
+    transform-origin: 59.5px 115px;
+    background: rgba(0, 0, 0, 0) url(http://livedemo00.template-help.com/magento_37205/skin/frontend/default/theme076k/images/new_shadow.png) no-repeat scroll 0% 152px / auto padding-box border-box;
+    border: 0px none rgb(153, 153, 153);
+    font: normal normal normal normal 12px/16.2000007629395px Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    outline: rgb(153, 153, 153) none 0px;
+}/*#LI_33, #LI_70, #LI_107*/
+
+#DIV_38, #DIV_75, #DIV_112 {
+    clear: both;
+    color: rgb(153, 153, 153);
+    height: 1px;
+    text-align: left;
+    width: 957px;
+    perspective-origin: 478.5px 0.5px;
+    transform-origin: 478.5px 0.5px;
+    border: 0px none rgb(153, 153, 153);
+    font: normal normal normal normal 0px/0px Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    outline: rgb(153, 153, 153) none 0px;
+}/*#DIV_38, #DIV_75, #DIV_112*/
+
+#A_59, #A_96 {
+    color: rgb(25, 189, 250);
+    text-align: center;
+    text-decoration: none;
+    perspective-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    border: 0px none rgb(25, 189, 250);
+    font: normal normal normal normal 11px/16px Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    outline: rgb(25, 189, 250) none 0px;
+}/*#A_59, #A_96*/
+

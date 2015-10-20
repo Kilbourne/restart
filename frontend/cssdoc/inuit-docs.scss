@@ -1,0 +1,438 @@
+// DEFAULTS
+// ========
+// These variables are inuitcss’ defaults; they should not be modified or adjusted directly; you should predefine the variables in your own project.  
+
+// High-level base settings.
+//-------------------------
+$inuit-base-font-size:          16px !default;
+$inuit-base-line-height:        24px !default;
+$inuit-base-text-color:         #333 !default;
+$inuit-base-background-color:   #fff !default;
+
+  // These variables are framework variables, sourced from variables defined above. Feel free to use these variables throughout your project, but do not modify or reassign them.
+
+$inuit-base-spacing-unit:           $inuit-base-line-height;
+$inuit-base-spacing-unit--small:    round($inuit-base-spacing-unit / 2);
+$inuit-base-spacing-unit--large:    round($inuit-base-spacing-unit * 2);
+
+// Colors
+// ------
+
+   // Page
+$inuit-base-background-color:   #f9f9f9;
+$inuit-base-text-color:         $color-gray;
+
+  // Links
+$color-links:           $color-pink;
+$color-links-carousel:  $color-gray-ui;
+
+  // Text
+$color-code:            $color-green;
+$color-pre-background:  $color-gray;
+$color-pre:             #fff;
+
+  // Buttons
+$color-btn:     $color-links;
+
+  // Iconic
+$color-iconic:  $color-gray-ui;
+
+  // Page head
+$color-masthead:                #fff;
+$color-page-head-border:        $color-pink;
+$color-page-head:               #fff;
+$color-page-head-background:    #fff;
+
+  // Site nav
+$color-site-nav:    $inuit-base-text-color;
+
+  // Page foot
+$color-page-foot:               #fff;
+
+  // Page micro
+$color-page-micro:              #fff;
+$color-page-micro-background:   $color-gray;
+
+  // Headings
+$color-headings:    $color-pink;
+$color-heading-sub: $color-gray;
+
+  // Quotes
+$color-quote:           $color-gray-light;
+$color-quote--banner:   $color-gray;
+
+  // Boxes
+$color-box-highlight-background:    $color-highlight;
+$color-box-highlight-border:        $color-gray-ui;
+$color-box-tint-background:         $color-tint;
+
+  // Bands
+$color-band-highlight-background:   $color-highlight;
+$color-band-tint-background:        $color-tint;
+$color-band-dark:                   #fff;
+$color-band-dark-background:        $color-gray;
+
+// SETTINGS-RESPONSIVE
+// -------------------
+// Hold our breakpoint aliases and conditions in a list.
+//
+// These can be invoked later on via the `media-query()` mixin found in
+// `_tools.responsive`.
+
+$breakpoints: (
+    "palm"          "screen and (max-width: 44.9375em)",
+    "lap"           "screen and (min-width: 45em) and (max-width: 63.9375em)",
+    "lap-and-up"    "screen and (min-width: 45em)",
+    "portable"      "screen and (max-width: 63.9375em)",
+    "desk"          "screen and (min-width: 64em)",
+    "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)"
+) !default;
+
+// TOOLS
+// =====
+
+// FUNCTIONS
+// --------
+// inuitcss makes use of a few functions that are also available for you to use
+// later on in your extension of the framework.
+
+  // Maths helpers.
+@function quarter($inuit-number) {
+    @return round($inuit-number / 4);
+}
+
+@function halve($inuit-number) {
+    @return round($inuit-number / 2);
+}
+
+@function double($inuit-number) {
+    @return round($inuit-number * 2);
+}
+
+@function quadruple($inuit-number) {
+    @return round($inuit-number * 4);
+}
+
+// MIXIN
+// ------
+
+  // Create a fully formed type style (sizing and vertical rhythm) by passing in a
+  // single value, e.g.:
+  //
+  // .foo {
+  //     @include inuit-font-size(12px);
+  // }
+  //
+  // This will generate a rem-based font-size with its pixel fallback, as well as
+  // a unitless line-height which will place the element on your baseline, e.g.:
+  //
+  // .foo {
+  //     font-size: 12px;
+  //     font-size: 0.75rem;
+  //     line-height: 2;
+  // }
+  //
+  // If you do not want inuitcss to generate you a line-height automatically, you
+  // simply pass in your own as a second paramater:
+  //
+  // .foo {
+  //     @include inuit-font-size(12px, 1.5);
+  // }
+  //
+  // This will yield:
+  //
+  // .foo {
+  //     font-size: 12px;
+  //     font-size: 0.75rem;
+  //     line-height: 1.5;
+  // }
+  //
+  // This parameter can be any integer, ‘inherit’, or ‘normal’. If you don’t want
+  // a line-height at all, pass in a second paramater of ‘none’ or ‘false’:
+  //
+  // .foo {
+  //     @include inuit-font-size(12px, none);
+  // }
+  //
+  // This will yield:
+  //
+  // .foo {
+  //     font-size: 12px;
+  //     font-size: 0.75rem;
+  // }
+
+// CLEARFIX
+// --------
+
+// Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+// Extend the clearfix class with Sass to avoid the `.clearfix` class appearing
+// over and over in your markup.
+
+// SHOW-HIDE
+// --------
+
+@mixin hide() {
+    position: absolute !important;
+    height: 1px; width: 1px; 
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.hide { @include hide(); }
+
+@include media-query(palm) {
+    .hide-palm { @include hide(); }
+}
+
+@include media-query(lap) {
+    .hide-lap { @include hide(); }
+}
+
+@include media-query(lap-and-up) {
+    .hide-lap-and-up { @include hide(); }
+}
+
+@include media-query(portable) {
+    .hide-portable { @include hide(); }
+}
+
+@include media-query(desk) {
+    .hide-desk { @include hide(); }
+}
+
+// SPACING
+// ------
+
+
+// Margin and padding helper classes. Use these to tweak layout on a micro
+// level.
+// `.(m|p)(t|r|b|l|h|v)(-|+|0) {}` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
+
+$inuit-enable-margins:                  false !default;
+$inuit-enable-margins--tiny:            false !default;
+$inuit-enable-margins--small:           false !default;
+$inuit-enable-margins--large:           false !default;
+$inuit-enable-margins--huge:            false !default;
+
+$inuit-enable-margins--negative:        false !default;
+$inuit-enable-margins--negative-tiny:   false !default;
+$inuit-enable-margins--negative-small:  false !default;
+$inuit-enable-margins--negative-large:  false !default;
+$inuit-enable-margins--negative-huge:   false !default;
+
+$inuit-enable-margins--none:            false !default;
+
+$inuit-enable-paddings:                 false !default;
+$inuit-enable-paddings--tiny:           false !default;
+$inuit-enable-paddings--small:          false !default;
+$inuit-enable-paddings--large:          false !default;
+$inuit-enable-paddings--huge:           false !default;
+
+$inuit-enable-paddings--none:           false !default;
+
+$inuit-enable-responsive-margins:                   false !default;
+$inuit-enable-responsive-margins--tiny:             false !default;
+$inuit-enable-responsive-margins--small:            false !default;
+$inuit-enable-responsive-margins--large:            false !default;
+$inuit-enable-responsive-margins--huge:             false !default;
+
+$inuit-enable-responsive-margins--negative:         false !default;
+$inuit-enable-responsive-margins--negative-tiny:    false !default;
+$inuit-enable-responsive-margins--negative-small:   false !default;
+$inuit-enable-responsive-margins--negative-large:   false !default;
+$inuit-enable-responsive-margins--negative-huge:    false !default;
+
+$inuit-enable-responsive-margins--none:             false !default;
+
+$inuit-enable-responsive-paddings:                  false !default;
+$inuit-enable-responsive-paddings--tiny:            false !default;
+$inuit-enable-responsive-paddings--small:           false !default;
+$inuit-enable-responsive-paddings--large:           false !default;
+$inuit-enable-responsive-paddings--huge:            false !default;
+
+$inuit-enable-responsive-paddings--none:            false !default;
+
+// WIDTHS
+// --------
+
+//  A series of width helper classes that you can use to size things like grid
+//  systems. Classes can take a fraction-like format (e.g. `.u-2/3`) or a spoken-
+//  word format (e.g. `.u-2-of-3`). Use these in your markup:
+//
+
+$inuit-widths-columns: (
+    1,
+    2,
+    3,
+    4,
+    5,
+) !default;
+
+@include inuit-widths($inuit-widths-columns);
+
+$inuit-widths-columns-responsive: (
+    1,
+    2,
+    3,
+    4,
+    5,
+) !default;
+
+// OBJECTS
+// =======
+
+// BLOCK
+// -------
+
+// ###The block object simply stacks an image on top of some text-like content.
+
+$inuit-block-gutter:            $inuit-base-spacing-unit !default;
+$inuit-enable-block--flush:     false !default;
+$inuit-enable-block--tiny:      false !default;
+$inuit-enable-block--small:     false !default;
+$inuit-enable-block--large:     false !default;
+$inuit-enable-block--huge:      false !default;
+$inuit-enable-block--center:    false !default;
+$inuit-enable-block--right:     false !default;
+// BOX
+// -----
+
+// ###The box object simply boxes off content.
+
+$inuit-box-padding:         $inuit-base-spacing-unit !default;
+$inuit-enable-box--flush:   false !default;
+$inuit-enable-box--tiny:    false !default;
+$inuit-enable-box--small:   false !default;
+$inuit-enable-box--large:   false !default;
+$inuit-enable-box--huge:    false !default;
+// BUTTONS
+// -------
+// A simple button object.
+
+$inuit-btn-padding:         halve($inuit-base-spacing-unit) !default;
+$inuit-btn-padding--small:  halve($inuit-btn-padding) !default;
+$inuit-btn-padding--large:  double($inuit-btn-padding) !default;
+$inuit-btn-background:      #4a8ec2 !default;
+$inuit-btn-color:           #fff !default;
+$inuit-btn-border-width:    1px !default;
+$inuit-btn-border-style:    solid !default;
+$inuit-btn-border-color:    $inuit-btn-background !default;
+$inuit-btn-radius:          0 !default;
+
+$inuit-enable-btn--small:   false !default;
+$inuit-enable-btn--large:   false !default;
+$inuit-enable-btn--full:    false !default;
+$inuit-enable-btn--pill:    false !default;
+// FLAG
+// -----
+// The flag object is a design pattern similar to the media object, however it
+// utilises `display: table[-cell];` to give us control over the vertical
+// alignments of the text and image. csswizardry.com/2013/05/the-flag-object
+$inuit-flag-namespace:          $inuit-namespace !default;
+
+$inuit-flag-gutter:             $inuit-base-spacing-unit !default;
+$inuit-flag-gutter--tiny:         quarter($inuit-flag-gutter) !default;
+$inuit-flag-gutter--small:          halve($inuit-flag-gutter) !default;
+$inuit-flag-gutter--large:         double($inuit-flag-gutter) !default;
+$inuit-flag-gutter--huge:       quadruple($inuit-flag-gutter) !default;
+
+$inuit-enable-flag--tiny:       false !default;
+$inuit-enable-flag--small:      false !default;
+$inuit-enable-flag--large:      false !default;
+$inuit-enable-flag--huge:       false !default;
+$inuit-enable-flag--rev:        false !default;
+$inuit-enable-flag--flush:      false !default;
+$inuit-enable-flag--top:        false !default;
+$inuit-enable-flag--bottom:     false !default;
+$inuit-enable-flag--responsive: false !default;
+$inuit-flag-collapse-at:        720px !default;
+// LAYOUT
+// --------
+// The inuitcss layout system uses `box-sizing: border-box;` and
+// `display: inline-block;` to create an extremely powerful, flexible
+// alternative to the traditional grid system. Combine the layout items with
+// the widths found in `trumps.widths`.
+$inuit-layout-namespace:        $inuit-namespace !default;
+
+$inuit-layout-gutter:           $inuit-base-spacing-unit !default;
+$inuit-layout-gutter--tiny:       quarter($inuit-layout-gutter) !default;
+$inuit-layout-gutter--small:        halve($inuit-layout-gutter) !default;
+$inuit-layout-gutter--large:       double($inuit-layout-gutter) !default;
+$inuit-layout-gutter--huge:     quadruple($inuit-layout-gutter) !default;
+
+$inuit-enable-layout--tiny:     false !default;
+$inuit-enable-layout--small:    false !default;
+$inuit-enable-layout--large:    false !default;
+$inuit-enable-layout--huge:     false !default;
+$inuit-enable-layout--flush:    false !default;
+$inuit-enable-layout--rev:      false !default;
+$inuit-enable-layout--middle:   false !default;
+$inuit-enable-layout--bottom:   false !default;
+$inuit-enable-layout--right:    false !default;
+$inuit-enable-layout--center:   false !default;
+$inuit-enable-layout--auto:     false !default;
+// LIST-UI
+// ---------
+// The UI list object creates blocky list items with a keyline separator out of
+// a `ul` or `ol`.
+$inuit-list-ui-padding:         $inuit-base-spacing-unit !default;
+
+$inuit-list-ui-border-width:    1px !default;
+$inuit-list-ui-border-style:    solid !default;
+$inuit-list-ui-border-color:    #ccc !default;
+
+$inuit-enable-list-ui--tiny:    false !default;
+$inuit-enable-list-ui--small:   false !default;
+$inuit-enable-list-ui--large:   false !default;
+$inuit-enable-list-ui--huge:    false !default;
+// MEDIA
+// ---------
+//  Place any image- and text-like content side-by-side, as per:
+ // stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ $inuit-media-gutter:                $inuit-base-spacing-unit !default;
+
+ $inuit-enable-media--tiny:          false !default;
+$inuit-enable-media--small:         false !default;
+$inuit-enable-media--large:         false !default;
+$inuit-enable-media--huge:          false !default;
+$inuit-enable-media--rev:           false !default;
+$inuit-enable-media--flush:         false !default;
+$inuit-enable-media--responsive:    false !default;
+$inuit-media-collapse-at:           720px !default;
+
+// PACK
+// -------
+// The pack object simply causes any number of elements pack up horizontally to
+// (()) automatically fill an equal, fluid width of their parent.
+$inuit-pack-gutter:         $inuit-base-spacing-unit !default;
+$inuit-enable-pack--auto:   false !default;
+$inuit-enable-pack--tiny:   false !default;
+$inuit-enable-pack--small:  false !default;
+$inuit-enable-pack--large:  false !default;
+$inuit-enable-pack--huge:   false !default;
+$inuit-enable-pack--rev:    false !default;
+$inuit-enable-pack--middle: false !default;
+$inuit-enable-pack--bottom: false !default;
+
+// WRAPPERS
+// -------
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-right: $spacing-unit--small;
+    padding-left:  $spacing-unit--small;
+
+    @include media-query(lap-and-up) {
+        padding-right: $spacing-unit;
+        padding-left:  $spacing-unit;
+    }
+
+}
+
+
+
+
+
+

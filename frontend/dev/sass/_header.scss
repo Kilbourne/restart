@@ -1,0 +1,174 @@
+a.anchor{display: block; position: relative; top: -175px; visibility: hidden;}
+.search-form-menu .search_bar {
+    display: none;
+    width: 250px;
+    
+    
+    left: -250px;
+
+position: relative;
+float: left;
+left: -69px;
+}
+ .search_bar.opened{
+top:23px;
+ }
+  .search_bar.closed{
+  	top:0;
+  }
+.search_button_trigger{
+	position: relative;
+vertical-align: top;
+
+float: right;
+}
+.search-form-menu .search_bar input {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 100;
+    position: relative;
+    top: 5px;
+}
+.page_header {
+	@extend .wrapper;
+	padding: 0px; 
+	margin-bottom: 80px;
+	padding-bottom:20px;
+	padding-right: 3px; 
+	word-wrap: break-word;
+
+	transition: all 0.3s ease 0s;
+position: fixed;
+left: 0px;
+right: 0px;
+top:0px;
+z-index: 999;
+max-height: 175px;  	
+}
+.header-wrap {
+		max-width: ( 1276 - ( quadruple($spacing-unit--large)));
+		margin: 0 auto;
+		
+		@extend %clearfix;
+	}
+
+.sticky_el {
+	min-width:100%;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    background: none repeat scroll 0% 0% #FFF;
+    top: 0px;
+}
+.brand{
+	float:left;
+}
+.bigbrand {
+	border-top: 27px solid #fcc32b;
+
+	font-family: 'Bebas';
+	font-size: 56px;	
+	line-height: 75px;
+}
+.litlebrand {
+	text-align: center;
+	font-size: 20px;
+
+}
+.settings {
+	font-size: 10px;
+	
+	float:right;
+	@extend %clearfix;
+}
+.settings-nav{
+
+	.last{
+		border: 1px solid #5F80C1;
+		color: #FFF;
+		text-shadow: 0px -1px 1px #3F5C9A;
+		padding: 0px;
+		margin-left: 14px;
+		font-size: 10px;
+  background: linear-gradient( #657daf, #3f5d99);
+
+  border-radius: 3px;
+		box-shadow: 0px 0px 1px #5872A7;
+	}
+	.fb-connect{
+		color: #FFF;
+		background: url("http://www.servovendi.com/skin/frontend/servovendi/servovendi-v2/images/background/bg-facebook-btn.png") no-repeat scroll left center transparent;
+		padding: 0px 3px 0px 23px;
+	}
+	.paypal{
+		height: 12px;
+		width: auto;
+	}
+}
+.settings-nav ul{
+	@extend  .list-inline;
+	display: inline-block;
+	
+	padding: ($spacing-unit--small*(2/3)) 0px;
+
+}
+header li{
+	margin-right: $spacing-unit;
+}
+
+.menu{
+  	margin: 12px 0 24px 24px;
+	float: left;
+}
+.menu nav{
+  	padding-top: 4.5%;
+}
+.menu ul{
+	@extend  .list-inline;
+	padding-left: 22px;
+}
+.menu li{
+	padding: 13px 0px;
+	&:hover{
+	 border-bottom: 1px solid $brand-color;
+	}
+}
+.action{
+	float:right;
+	width: 19%;
+margin-top: 40px;
+	ul{
+		text-align: right;
+	}
+	li{
+margin-right:0;
+		text-align: right;
+		list-style:none;
+	}
+	input{
+
+		margin-left: -71%;
+		width: 162%;	
+  		height: 30px;
+	}
+	a{
+
+	}
+}
+.arrow{
+	background: url("../../asset/images/arrow-black.png") no-repeat scroll 0% 0% / 100% auto transparent;
+width: 65px;
+height: 65px;
+
+float: right;
+margin-top: 20px;
+}
+.black_arr{
+	background:url("../../asset/images/arrow-black.png") no-repeat scroll 0% 0% / 100% auto #FFF;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+	
+
+}

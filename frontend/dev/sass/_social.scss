@@ -1,0 +1,199 @@
+.social{
+	margin-left: 25px;
+	margin-right: 25px;
+	padding: 50px 0px;
+
+	&>.content {
+    width: 100%;
+    margin: 0px auto;
+			padding-left: 25px;
+		padding-right: 25px;
+		@extend .clearfix;
+	& > div{
+		width:33%;
+		display:inline-block;
+		margin-bottom: 40px;
+		float: left;
+	}
+	.like-box{
+	display:block
+}
+	}
+
+	h2{
+text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		letter-spacing: 3px;
+		  margin-left: 260px;
+	}
+
+	.single .fb_iframe_widget {
+
+    float: right;
+    max-height: 700px;
+
+		iframe{
+		margin-left: -9%;
+margin-top: -43%;
+transform: scale(0.86, 0.86);
+	}
+	}
+	li{
+		list-style: none;
+	}
+	.FB_el{
+		max-height: 115px;
+		overflow:hidden;
+		margin-bottom: 16px;
+		& > *{
+			display:inline-block;
+			padding: 1em;
+		}
+		& > .block_body{
+			width: 58%;
+font-size: 12px;
+height: 115px;
+		}
+		.img_container{
+			width:159px;
+			vertical-align: top;
+			text-align: center;
+		}
+		img {
+			margin: 0 auto;
+			
+		}
+		.text-fill{
+			max-height: 65%;
+			overflow: hidden;
+		}
+	}
+}
+.contact-wrapper{
+	@extend .wrapper;
+	background: none repeat scroll 0% 0% #ffffff;;
+	&>div{
+		display:inline-block;
+		width:49%;
+	}
+		h2{
+		  text-align: center;
+		  margin-bottom:20px;	
+  			padding: 1em;
+		}
+}
+.contact> div{
+	height: 30%;
+	margin-bottom:20px;
+}
+.contact .contact-form{
+	height: 67%
+}
+#contact-form{
+
+	input,textarea{
+		 -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+		  border-radius: 0 !important;
+		  padding-top: 14px;
+  line-height: 18px;
+  font-size: 18px;
+  font-family: "FjallaOne-Regular", sans-serif;
+  outline: none;
+		  box-sizing: border-box;
+  resize: none;
+  height: 49px;
+    border: 1px solid #ffffff;
+  border-bottom: 1px solid #d0d8d8;
+	}
+	fieldset{
+		  border: 0px solid #c0c0c0;
+	}
+	fieldset>div{
+		width: 100%;
+	}
+	.email input,.message textarea{
+		width: 100%;	
+	}
+	.message span{
+		  top: -42px;
+	}
+	.name-wrapper,.phone-wrapper{
+		display:inline-block;
+		width: 49%;
+	}
+	._placeholder {
+		height: 49px;
+  padding-top: 15px;
+  width: 100% !important;
+  position: relative;
+  top:-35px;
+  left: 0;
+  display: block;
+  line-height: 14px;
+  font-size: 14px;
+  
+  color: #404040;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: text;
+}
+.contact-form-buttons {
+
+  text-align: center;
+  a{
+  	 font-family: "FjallaOne-Regular", sans-serif;
+  	  font-size: 15px;
+  	  line-height: 13px;
+  color: #5f5f5f;
+  padding: 8px 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  }
+}
+}
+#googleMap{
+	height:734px;
+
+}
+
+.store-info{
+
+	font-size: 0.6875em;
+line-height: 2.18182;
+ ul{
+ 	
+    list-style: outside none none;
+    margin: 0px;
+    padding: 0px;
+}
+li{
+	padding-top: 6px;
+padding-bottom: 6px;
+ font-family: "FjallaOne-Regular", sans-serif;
+   font-weight: 400;
+ }
+}
+.opening-hours,.tel{
+	display:inline-block;
+	margin-right:20px;
+	vertical-align: top;
+}
+.like-box{
+	text-align: center;
+margin-bottom: 45px;
+}
+.contact,.like-box{
+	vertical-align: top;
+
+}
+
+.contact-form{
+	padding:24px ;
+	
+}
+

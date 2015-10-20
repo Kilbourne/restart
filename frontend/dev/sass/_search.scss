@@ -1,0 +1,105 @@
+.search-form{
+	background: none repeat scroll 0% 0% #F8F8F8;
+padding-bottom: 50px;
+text-align: center;
+	width:100%;
+	color: #5C5C5C;
+	font-family: "Merriweather";
+	font-weight: 400;
+
+	& > div{
+		    width: 100%;
+    margin: 0px auto;
+	}
+
+	h2{
+		    padding: 50px 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px;
+	padding-bottom: 15px;
+	}
+h6{
+	padding-bottom: 40px;
+	font-style: italic;
+	span{
+		font-style: normal;
+	}
+}
+&-container{
+	    font-size: 12px;
+}
+
+	input,select{
+margin-right: 31px;
+width: 29%;
+font-style: italic;
+color: #999;
+
+	}
+	input{
+		box-sizing: border-box;
+-moz-appearance: none;
+box-shadow: none;
+border-width: medium medium 1px;
+border-style: none none solid;
+border-color: -moz-use-text-color -moz-use-text-color #3C3C3C;
+-moz-border-top-colors: none;
+-moz-border-right-colors: none;
+-moz-border-bottom-colors: none;
+-moz-border-left-colors: none;
+border-image: none;
+background: none repeat scroll 0% 0% transparent;
+height: 2.5em;
+padding: 3px 4px;
+
+	}
+	select{
+		background: url("http://tokokoodemo.us/papirus/books/wp-content/themes/papirus/img/select.png") no-repeat scroll 94% center transparent;
+text-indent: 0.01px;
+text-overflow: "";
+border-width: medium medium 1px;
+border-style: none none solid;
+border-color: -moz-use-text-color -moz-use-text-color #3C3C3C;
+-moz-border-top-colors: none;
+-moz-border-right-colors: none;
+-moz-border-bottom-colors: none;
+-moz-border-left-colors: none;
+border-image: none;
+border-radius: 0px;
+font-style: italic;
+height: 2.5em;
+padding: 3px 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+	}
+	.result{
+		height: 700px;
+		padding: 1em;
+  border-style: solid;
+  margin-top: 30px;
+
+	}
+	.placeholder-wrapper{
+  margin: 80px auto;
+  vertical-align: middle;
+    height: 500px;
+		display:inline-block;
+span{
+	  vertical-align: top;
+  
+  display: inline-block;
+  margin-left: -67px;
+  margin-top: -30px;
+}
+					}
+			img.placeholder{
+			height: 500px;
+			width:auto;
+			display:block
+			}
+}

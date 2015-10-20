@@ -1,0 +1,89 @@
+// DEFAULTS
+// ========
+// These variables are inuitcss’ defaults; they should not be modified or adjusted directly; you should predefine the variables in your own project.  
+
+// High-level base settings.
+//-------------------------
+$inuit-base-font-size:          16px !default;
+$inuit-base-line-height:        24px !default;
+$inuit-base-text-color:         #333 !default;
+$inuit-base-background-color:   #fff !default;
+
+  // These variables are framework variables, sourced from variables defined above. Feel free to use these variables throughout your project, but do not modify or reassign them.
+
+$inuit-base-spacing-unit:           $inuit-base-line-height;
+$inuit-base-spacing-unit--small:    round($inuit-base-spacing-unit / 2);
+$inuit-base-spacing-unit--large:    round($inuit-base-spacing-unit * 2);
+
+// Colors
+// ------
+
+   // Page
+$inuit-base-background-color:   #f9f9f9;
+$inuit-base-text-color:         $color-gray;
+
+  // Links
+$color-links:           $color-pink;
+$color-links-carousel:  $color-gray-ui;
+
+  // Text
+$color-code:            $color-green;
+$color-pre-background:  $color-gray;
+$color-pre:             #fff;
+
+  // Buttons
+$color-btn:     $color-links;
+
+  // Iconic
+$color-iconic:  $color-gray-ui;
+
+  // Page head
+$color-masthead:                #fff;
+$color-page-head-border:        $color-pink;
+$color-page-head:               #fff;
+$color-page-head-background:    #fff;
+
+  // Site nav
+$color-site-nav:    $inuit-base-text-color;
+
+  // Page foot
+$color-page-foot:               #fff;
+
+  // Page micro
+$color-page-micro:              #fff;
+$color-page-micro-background:   $color-gray;
+
+  // Headings
+$color-headings:    $color-pink;
+$color-heading-sub: $color-gray;
+
+  // Quotes
+$color-quote:           $color-gray-light;
+$color-quote--banner:   $color-gray;
+
+  // Boxes
+$color-box-highlight-background:    $color-highlight;
+$color-box-highlight-border:        $color-gray-ui;
+$color-box-tint-background:         $color-tint;
+
+  // Bands
+$color-band-highlight-background:   $color-highlight;
+$color-band-tint-background:        $color-tint;
+$color-band-dark:                   #fff;
+$color-band-dark-background:        $color-gray;
+
+// SETTINGS-RESPONSIVE
+// -------------------
+// Hold our breakpoint aliases and conditions in a list.
+//
+// These can be invoked later on via the `media-query()` mixin found in
+// `_tools.responsive`.
+
+$breakpoints: (
+    "palm"          "screen and (max-width: 44.9375em)",
+    "lap"           "screen and (min-width: 45em) and (max-width: 63.9375em)",
+    "lap-and-up"    "screen and (min-width: 45em)",
+    "portable"      "screen and (max-width: 63.9375em)",
+    "desk"          "screen and (min-width: 64em)",
+    "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)"
+) !default;

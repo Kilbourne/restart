@@ -1,0 +1,105 @@
+
+#header{
+	  font: 13px/1.5 'Droid Sans', sans-serif;
+  word-wrap: break-word;
+	.header-wrapper{
+		margin: 0 auto;
+		max-width: 1278px;
+	}
+	.brand{
+		 float:left;
+	 	padding-right:10px;
+	
+		h1 {
+		  font-family: 'Bebas', Arial, sans-serif;
+		  font-size: 76px;
+		  line-height: 1.25;  
+		  margin: 0 0 5px;
+		  border-top: 27px solid #fcc32b;
+	  	}
+	  	h2 {
+	  	text-align: center;
+		font-size: 18px;
+		font-weight: normal;
+		line-height: 1.25;
+		}
+	}
+	nav{
+		margin-top: 3.5%;
+		margin-left: 40px;
+		float: left;
+	}
+	.nav-list{
+		margin:0;
+	}
+	.nav-list-item{
+		list-style: none;
+  		float: left;
+  		margin-right: 15px;
+  		a{
+  			display: block;
+  			padding: 15px 5px;
+  			text-transform: uppercase;
+  			border-top: 4px solid transparent;
+  		}
+	}
+	.intl{ 
+		  margin-bottom: 5%;
+  		  margin-top: 2%;
+  		  border-style: outset;
+  		  border-radius: 9px;
+  		    float: right;
+  		  .arrow{
+  		    position: static;
+			 margin-left: 9px;
+			 vertical-align: middle;
+			 width: 13px;
+			 height: 11px;
+			 display: inline-block;
+  		    text-indent: -9999px;
+  			background: url(http://demo.colorlabsproject.com/eureka-woocommerce/wp-content/themes/eureka/images/eureka-sprite.png) no-repeat;
+  			}
+	}
+	.action-menu{
+	width: 22%;
+  float: right;
+  margin-top: 6%;
+  margin-right: -5%;
+	}
+	.button.black{
+		  box-shadow: 0 1px 5px rgba(0,0,0,.15), 0 1px 1px rgba(255,255,255,.5) inset !important;
+  		font-size: 12px !important;
+  		font-weight: bold !important;
+		width: 22%;
+  		float: right;  
+		margin-top: -2%;
+		line-height: 1;
+		  cursor: pointer;
+		  margin-left: 10px;
+		  background: -webkit-linear-gradient(#464646, #1c1c1c) !important;
+		  color: #fff !important;
+		  border: 1px solid #000 !important;
+		  text-shadow: 0 1px rgba(0,0,0,.5) !important;
+		    padding: 7px 14px !important;
+  border-radius: 100px !important;
+  float: right !important;
+  /* border-color: #fcbc12 !important; */
+  white-space: nowrap;
+  display: inline-block;
+
+	}
+	.cart {
+  float: right; 
+  margin-right: 3px; 
+	}
+	 .cart-icon {
+  width: 32px;
+  height: 32px;
+  float: left;
+  margin: -7px 12px 0 0;
+  background: url(http://demo.colorlabsproject.com/eureka-woocommerce/wp-content/themes/eureka/images/eureka-sprite.png) no-repeat 0 -15px;
+}
+}
+.dropdown-menu{
+	display:none;
+}

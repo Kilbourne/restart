@@ -1,0 +1,21 @@
+
+section.novita
+	div
+			h2 IL LIBRAIO CONSIGLIA		
+
+			- for (var y=1;y<4;y++){
+			ul
+				- for (var x=1;x<6;x++){
+					li
+						a(href="" title="")
+							- n= x+((y-1)*5);
+							- n= n<10?"0"+n:n;
+							img(src="./asset/images/g#{n}.jpg" width="107" height="160" alt="" )
+						div.shadow.sh1
+						h4
+							a  
+							|E. Ionesco
+							br
+							|  La Cantatrice calva
+					- }
+			- }
